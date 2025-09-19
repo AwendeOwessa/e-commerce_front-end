@@ -1,0 +1,107 @@
+.retour {
+    border: 3px solid rgb(66, 66, 66);
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    position: relative;
+    left: -40%;
+    height: 40px;
+    width: 40px;
+}
+
+.retour {
+    border: 3px solid rgb(66, 66, 66);
+    border-radius: 100px;
+    left: -40%;
+    height: 35px;
+    width: 35px;
+}
+
+.retour:hover {
+    background-color: rgb(186, 181, 181);
+    color: white;
+    border: 3px solid white;
+    transition: 0.3s;
+    box-shadow: 0 0 10px white;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.retour:active {
+    background-color: rgb(113, 112, 112);
+    color: white;
+    border: 3px solid white;
+    box-shadow: 0 0 10px white;
+    transform: scale(0.9);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profil {
+    position: relative;
+    background-color: #ccc;
+    border-radius: 2000px;
+    width: 200px;
+}
+
+.crayon {
+    position: absolute;
+    background-color: black;
+    border-radius: 2000px;
+    border: 4px solid #ccc;
+    bottom: -5%;
+    right: -5%;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.crayon:hover {
+    background-color: rgb(69, 69, 69);
+}
+
+.crayon:active {
+    background-color: #9a9898;
+}
+
+.crayon_img {
+    width: 100%;
+}
+
+.bloc {
+    width: 100vw;
+}
+
+.input {
+    border-radius: 10px;
+    background-color: rgb(218, 214, 214);
+    border: none;
+    height: 100%;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.bouton {
+    border: none;
+    width: 100%;
+    border-radius: 200px;
+    color: white;
+    background-color: rgb(69, 69, 69);
+}
+
+.bouton:hover {
+    background-color: #313131;
+}
+
+.bouton:active {
+    background-color: black;
+}

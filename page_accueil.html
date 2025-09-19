@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/page_accueil.css">
+    <title>Page d'acceuil</title>
+</head>
+
+<body class="d-flex flex-column mb-2">
+
+    <header class="d-flex flex-column">
+
+        <section class="d-flex flex-row justify-content-between align-items-center px-1">
+            <p><span style="color: gray;">Localisation</span><br> <img src="assets/images/localisation.png" alt="localilsation" class="img-fluid localisation_img "><span id="ville">Yaounde</span> , <span id="pays">CMR</span> <a href="localisation_accueil.html"
+                    class="deroulant">▼</a></p>
+            <figcaption class="cloche_bloc">
+                <a href=""><img src="assets/images/cloche.png" alt="cloche" class="img-fluid p-1 cloche"></a>
+
+            </figcaption>
+        </section>
+
+        <section class="d-flex flex-row gap-1 justify-items-center align-items-center bloc p-2">
+            <div class="d-flex flex-row search">
+                <img src="assets/images/loupe.png" alt="loupe" class="loupe img-fluid p-1" onclick="recherche">
+                <input type="search" class="recherche py-2 ps-1" placeholder="Rechercher...">
+            </div>
+            <div class="setting_bloc">
+                <img src="assets/images/settings.png" alt="setting" class="setting img-fluid p-1">
+            </div>
+        </section>
+
+    </header>
+
+    <section class="d-flex flex-row align-items-center bloc2 mt-5 p-2 mx-2">
+
+        <div class="d-flex flex-column w-100 px-3 bloc3">
+
+            <h4>Nouvelle Collection</h4>
+            <p>remise de 50% pour la première transaction</p>
+            <button type="submit" onclick="window.location.href=''" class="py-2 my-2 bouton">Acheter Maintenant</button>
+
+        </div>
+
+        <div id="carouselExampleCaptions" class="carousel slide w-100">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/bagBlack.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/messageBlack.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/userWhite.png" class="d-block w-100" alt="...">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/userColor.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button>
+
+        </div>
+
+    </section>
+
+    <section class="d-flex flex-column py-3">
+
+        <div class="d-flex flex-row justify-content-between mb-2">
+            <h3>Catégorie</h3>
+            <p><a href="" style="text-decoration: none; color: gray; font-weight: 80%">Tout Voir</a></p>
+        </div>
+
+        <div class="position-relative">
+
+            <button class="scroll-btn left" onclick="scrollCategorie(-200)">&#10094;</button>
+
+            <div class="d-flex flex-row gap-2  align-items-center categorie_barre">
+                <div class="d-flex flex-column justify-content-center categorie" id="lit">
+                    <img src="assets/images/categorie/bed.png" alt="bed" class="img-fluid categorie_img p-2">
+                    <p class="categorie_nom">lit</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center categorie" id="canape">
+                    <img src="assets/images/categorie/canape.png" alt="canape" class="img-fluid categorie_img p-2">
+                    <p class="categorie_nom">canapé</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center categorie" id="chaise">
+                    <img src="assets/images/categorie/chair.png" alt="chaise" class="img-fluid categorie_img p-2">
+                    <p class="categorie_nom">chaise</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center categorie" id="robe">
+                    <img src="assets/images/categorie/dress.png" alt="robe" class="img-fluid categorie_img p-2">
+                    <p class="categorie_nom">robe</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center categorie" id="paire">
+                    <img src="assets/images/categorie/paire.png" alt="paire" class="img-fluid categorie_img p-2">
+                    <p class="categorie_nom">paire</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center categorie" id="pullover">
+                    <img src="assets/images/categorie/pullover.png" alt="pullover" class="img-fluid categorie_img p-2">
+                    <p class="categorie_nom">pull over</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center categorie" id="jupe">
+                    <img src="assets/images/categorie/shirt.png" alt="jupe" class="img-fluid categorie_img p-2">
+                    <p class="categorie_nom">jupe</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center categorie" id="jupe">
+                    <img src="assets/images/categorie/skirt.png" alt="jupe" class="img-fluid categorie_img p-2">
+                    <p class="categorie_nom">jupe</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center categorie" id="chaussure">
+                    <img src="assets/images/categorie/sport-shoe.png" alt="chaussure" class="img-fluid categorie_img p-2">
+                    <p class="categorie_nom">chaussure</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center categorie" id="talon">
+                    <img src="assets/images/categorie/talon.png" alt="talon" class="img-fluid categorie_img p-2">
+                    <p class="categorie_nom">talon</p>
+                </div>
+
+            </div>
+
+            <button class="scroll-btn right" onclick="scrollCategorie(200)">&#10095;</button>
+        </div>
+
+    </section>
+
+    <main>
+
+        <div class="d-flex flex-row justify-content-between">
+            <p>Achat rapide</p>
+            <p class="time_bloc"><span class="time" id="heure"></span> : <span class="time" id="minute"></span> : <span class="time" id="seconde"></span></p>
+        </div>
+        <div class="position-relatiove">
+            <button class="scroll-btn left" onclick="scrollTri(-200)">&#10095;</button>
+            <div class="d-flex flex-row gap-3 tri_bloc mx-2">
+                <p class="tri px-3 ">Tout</p>
+                <p class="tri px-3">Nouveauté</p>
+                <p class="tri px-3">Populaire</p>
+                <p class="tri px-3">Tendance</p>
+                <p class="tri px-3">Recommandé pour vous</p>
+            </div>
+            <button class="scroll-btn right" onclick="scrollTri(200)">&#10095;</button>
+        </div>
+
+        <section class="bloc3 m-2">
+
+            <div class="d-flex flex-column justify-content-center article p-2">
+                <img src="assets/images/likeOff.png" alt="like" class="img-fluid like me-3 mt-2">
+                <div class="img_article">
+                    <img src="assets/images/chaise.webp" alt="chaise" class="img-fluid photo">
+                </div>
+                <div class="d-flex flex-row info_article ">
+                    <p id="nom">nom</p>
+                    <p>⭐<span id="note">note</span></p>
+                </div>
+                <div class="prix_article">
+                    <p>FCFA <span>prix</span></p>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column justify-content-center article p-2">
+                <img src="assets/images/likeOff.png" alt="like" class="img-fluid like me-3 mt-2">
+                <div class="img_article">
+                    <img src="assets/images/chaise.webp" alt="chaise" class="img-fluid photo">
+                </div>
+                <div class="d-flex flex-row info_article ">
+                    <p id="nom">nom</p>
+                    <p>⭐<span id="note">note</span></p>
+                </div>
+                <div class="prix_article">
+                    <p>FCFA <span>prix</span></p>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column justify-content-center article p-2">
+                <img src="assets/images/likeOff.png" alt="like" class="img-fluid like me-3 mt-2">
+                <div class="img_article">
+                    <img src="assets/images/chaise.webp" alt="chaise" class="img-fluid photo">
+                </div>
+                <div class="d-flex flex-row info_article ">
+                    <p id="nom">nom</p>
+                    <p>⭐<span id="note">note</span></p>
+                </div>
+                <div class="prix_article">
+                    <p>FCFA <span>prix</span></p>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column justify-content-center article p-2">
+                <img src="assets/images/likeOff.png" alt="like" class="img-fluid like me-3 mt-2">
+                <div class="img_article">
+                    <img src="assets/images/chaise.webp" alt="chaise" class="img-fluid photo">
+                </div>
+                <div class="d-flex flex-row info_article ">
+                    <p id="nom">nom</p>
+                    <p>⭐<span id="note">note</span></p>
+                </div>
+                <div class="prix_article">
+                    <p>FCFA <span>prix</span></p>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column justify-content-center article p-2">
+                <img src="assets/images/likeOff.png" alt="like" class="img-fluid like me-3 mt-2">
+                <div class="img_article">
+                    <img src="assets/images/chaise.webp" alt="chaise" class="img-fluid photo">
+                </div>
+                <div class="d-flex flex-row info_article ">
+                    <p id="nom">nom</p>
+                    <p>⭐<span id="note">note</span></p>
+                </div>
+                <div class="prix_article">
+                    <p>FCFA <span>prix</span></p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+    <footer class="d-flex flex-row justify-content-around p-2 bloc_end">
+        <a href="page_accueil.html">
+            <div class="icone">
+                <img src="assets/images/homeBlack.png" alt="home" class="img-fluid logo selectionne p-1">
+            </div>
+        </a>
+        <a href="">
+            <div class="icone">
+                <img src="assets/images/bagWhite.png" alt="bag" class="img-fluid logo p-1">
+            </div>
+        </a>
+        <a href="message.html">
+            <div class="icone">
+                <img src="assets/images/messageWhite.png" alt="message" class="img-fluid logo p-1">
+            </div>
+        </a>
+        <a href="wishList.html">
+            <div class="icone">
+                <img src="assets/images/coeurWhite.png" alt="coeur" class="img-fluid logo p-1">
+            </div>
+        </a>
+        <a href="">
+            <div class="icone">
+                <img src="assets/images/userWhite.png" alt="user" class="img-fluid logo p-1">
+            </div>
+        </a>
+    </footer>
+
+    <script src="assets/javascript/page_accueil.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js " integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q " crossorigin="anonymous "></script>
+</body>
+
+</html>

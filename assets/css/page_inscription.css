@@ -1,0 +1,186 @@
+.bloc {
+    width: 100%;
+}
+
+.bloc1 {
+    width: 100%;
+}
+
+.input {
+    border-radius: 10px;
+    background-color: rgb(218, 214, 214);
+    border: none;
+}
+
+.input1 {
+    border-radius: 10px;
+    background-color: rgb(218, 214, 214);
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.motDePasse {
+    border-radius: 10px;
+    background-color: rgb(218, 214, 214);
+    border: none;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.motDePasse:focus-within {
+    outline: 2px solid black;
+}
+
+.motDePasse:after {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+}
+
+#password :active {
+    border: 1px solid #ccc;
+}
+
+#eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#eye:hover {
+    opacity: 1;
+}
+
+.check {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+    line-height: 20px;
+}
+
+#checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(69, 69, 69);
+    border-radius: 4px;
+}
+
+.checkbox:hover {
+    background-color: #ccc;
+}
+
+.checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+#checkbox:checked~.checkbox:after {
+    display: block;
+}
+
+.checkbox:after {
+    left: 8px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+a {
+    color: rgb(69, 69, 69);
+}
+
+.bouton {
+    border: none;
+    width: 100%;
+    border-radius: 200px;
+    color: white;
+    background-color: rgb(69, 69, 69);
+}
+
+.bouton:hover {
+    background-color: #313131;
+}
+
+.bouton:active {
+    background-color: black;
+}
+
+.legende {
+    border: none;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.legende legend {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.legende legend:before,
+.legende legend:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background: #ccc;
+}
+
+.legende legend::before {
+    right: 100%;
+    margin-right: 10px;
+}
+
+.legende legend::after {
+    left: 100%;
+    margin-left: 10px;
+}
+
+.logo_box {
+    width: 80px;
+    height: auto;
+    border-radius: 200px;
+    transform: scale(0.8);
+}
+
+.logo_box:hover {
+    transform: scale(0.9);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    height: 10px;
+    width: 200px;
+    background-color: grey;
+    position: absolute;
+}

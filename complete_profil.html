@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="stylesheet" href="assets/css/complete_profil.css">
+    <title></title>
+</head>
+
+<body class="d-flex flex-column align-items-center gap-3 min-vh-100">
+
+    <a href="">
+        <div class="retour my-3 p-1">
+            <img src="assets/images/fleche_arriere.png" alt="retour" class="img-fluid">
+        </div>
+    </a>
+
+    <main class=" gap-2 px-2">
+
+        <h1 style="text-align: center;">complétez votre profil</h1>
+
+        <p>Ne vous inquiétez pas, vous êtes le seul à pouvoir voir vos données personnelles, personne d'autre ne pourra les voir.</p>
+
+        <figcaption class="profil mt-4 p-3">
+            <img src="assets/images/personne.png" alt="personne" class="img-fluid" id="profil">
+            <div class="crayon p-2" id="crayon"><img src="assets/images/pencil.png" alt="pencil" class="img-fluid crayon_img"></div>
+            <input type="file" id="fichier" accept="image/*" style="display: none;">
+        </figcaption>
+
+    </main>
+
+    <section class="d-flex flex-column px-3 bloc gap-3 ">
+
+        <div class="d-flex flex-column gap-1 ">
+            <label for="nom ">Pseudo</label>
+            <input type="text " name="pseudo " id="pseudo" placeholder="Nanami " class="py-3 px-2 input " required>
+        </div>
+
+        <div class="d-flex flex-column gap-1 ">
+            <label for="tel ">Numéro de Téléphone</label>
+            <input type="tel " name="tel " id="tel" placeholder="Entrez votre numéro de téléphone " class="py-3 ps-5 input " style="width: 100%; " required>
+        </div>
+
+        <div class="d-flex flex-column gap-1 ">
+            <label for="genre ">Genre</label>
+            <select name="genre " id="genre" class="py-3 px-2 input " required>
+                <option value=" ">--Sélectionner--</option>
+                <option value="homme ">Homme</option>
+                <option value="femme ">Femme</option>
+            </select>
+        </div>
+
+        <button type="submit " class="py-3 my-3 bouton ">Compléter le Profil</button>
+
+    </section>
+
+    <script src="assets/javascript/complete_profil.js"></script>
+
+    <!--pour la selection du pays du numero de telephone-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="assets/javascript/pays.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js " integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q " crossorigin="anonymous "></script>
+</body>
+
+</html>

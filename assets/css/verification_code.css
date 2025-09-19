@@ -1,0 +1,77 @@
+.retour {
+    border: 3px solid rgb(66, 66, 66);
+    border-radius: 100px;
+    left: -40%;
+    height: 35px;
+    width: 35px;
+}
+
+.retour:hover {
+    background-color: rgb(186, 181, 181);
+    color: white;
+    border: 3px solid white;
+    transition: 0.3s;
+    box-shadow: 0 0 10px white;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.retour:active {
+    background-color: rgb(113, 112, 112);
+    color: white;
+    border: 3px solid white;
+    box-shadow: 0 0 10px white;
+    transform: scale(0.9);
+}
+
+.code_bloc {
+    width: 100%;
+}
+
+.code {
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    background-color: rgb(186, 181, 181);
+    font-weight: bold;
+    width: 15vw;
+}
+
+#renvoyer {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#renvoyer:hover {
+    text-decoration: underline;
+}
+
+#renvoyer:active {
+    text-decoration: underline;
+}
+
+.bouton {
+    border: none;
+    width: 100%;
+    border-radius: 200px;
+    color: white;
+    background-color: rgb(69, 69, 69);
+}
+
+.bouton:hover {
+    background-color: #313131;
+}
+
+.bouton:active {
+    background-color: black;
+}
+
+.footer {
+    height: 10px;
+    width: 200px;
+    background-color: grey;
+    bottom: 0;
+    position: absolute;
+}

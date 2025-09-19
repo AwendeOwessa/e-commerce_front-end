@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/page_inscription.css">
+    <title>Page d'inscription</title>
+</head>
+
+<body class="d-flex flex-column align-items-center gap-3 min-vh-100">
+
+    <h1 class="pt-5 mt-5">Créer un compte</h1>
+
+    <p class="text-center px-5" style="color: gray;">Remplissez vos informations ci-dessous ou inscrivez-vous avec votre compte social</p>
+
+    <section class="d-flex flex-column gap-3 align-items-center bloc px-3">
+
+        <div class="d-flex flex-column bloc1 gap-1">
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" placeholder="Joseph" class="py-3 px-2 input" required>
+        </div>
+
+        <div class="d-flex flex-column bloc1 gap-1">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="example@gmail.com" class="py-3 px-2 input" required>
+        </div>
+
+        <div class="d-flex flex-column bloc1 gap-1">
+            <label for="password">Mot de Passe </label>
+            <div class="motDePasse">
+                <input type="password" name="password" placeholder="Mot de Passe" id="password" class="py-3 px-2 input1" required>
+                <img src="assets/images/eyeOff.png" alt="eye" id="eye" class="img-fluid">
+            </div>
+        </div>
+
+        <label for="checkbox" class="check"><input type="checkbox" name="checkbox" id="checkbox"><span class="checkbox"></span>Accepter <a href="terme&Condition.html">les termes & conditions</a></label>
+
+        <button type="submit" onclick="window.location.href='verification_code.html'" class="py-3 my-3 bouton ">S'inscrire</button>
+
+        <fieldset class="py-5 legende ">
+            <legend style="color: gray; ">Ou se connecter avec</legend>
+        </fieldset>
+
+
+
+    </section>
+
+    <div class="d-flex flex-row gap-1 ">
+        <div class="logo_box p-1">
+            <img src="assets/images/apple.png " alt="apple " class="img-fluid logo ">
+        </div>
+        <div class="logo_box p-1 ">
+            <img src="assets/images/google.png " alt="google " class="img-fluid logo ">
+        </div>
+        <div class="logo_box p-1 ">
+            <img src="assets/images/facebook.png " alt="facebook " class="img-fluid logo ">
+        </div>
+    </div>
+
+    <p class="my-3 ">Vous avez déjà un compte ? <a href="page_de_connexion.html ">Connectez-vous</a></p>
+
+    <div class="footer "></div>
+
+    <script src="assets/javascript/page_inscription.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js " integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q " crossorigin="anonymous "></script>
+</body>
+
+</html>

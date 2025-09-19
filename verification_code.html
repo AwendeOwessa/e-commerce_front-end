@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/verification_code.css">
+    <title>Page de connexion</title>
+</head>
+
+<body class="d-flex flex-column align-items-center gap-3 px-2 mx-4 min-vh-100 ">
+
+    <a href="page_inscription.html">
+        <div class="retour my-3 p-1">
+            <img src="assets/images/fleche_arriere.png" alt="retour" class="img-fluid">
+        </div>
+    </a>
+
+    <main style="flex: 1;" class="d-flex flex-column gap-3">
+
+        <h1 style="text-align: center;" class="pb-1">vérifier le code</h1>
+
+        <p style="text-align:center; color: gray;">veuillez entrer le code que nous venons d'envoyer par e-mail <br><span id="email">example@gmail.com</span></p>
+
+        <div class="code_bloc d-flex flex-row justify-content-center gap-2 py-5">
+            <input type="text" maxlength="1" class="code py-2" placeholder="-" required>
+            <input type="text" maxlength="1" class="code py-2" placeholder="-" required>
+            <input type="text" maxlength="1" class="code py-2" placeholder="-" required>
+            <input type="text" maxlength="1" class="code py-2" placeholder="-" required>
+        </div>
+
+        <p style="text-align: right;">Je n'ai pas reçu le code <br><span id="renvoyer">Renvoyer le code</span> <br><span id="minuteur"></span></p>
+
+        <button type="submit" class="py-3 my-3 bouton ">Verifier</button>
+
+    </main>
+
+
+    <div class=" footer "></div>
+
+    <script src="assets/javascript/verification_code.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js " integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q " crossorigin="anonymous "></script>
+</body>
+
+</html>
