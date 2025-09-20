@@ -276,6 +276,34 @@ input[type="search"]::-webkit-search-cancel-button {
     background-color: #313131;
 }
 
+.scroll-btn1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: black;
+    font-size: 20px;
+    padding: 2px 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-btn1:hover {
+    transition: 0.3s;
+    background-color: #313131;
+    color: white;
+}
+
+.scroll-btn1.left {
+    left: 5px;
+}
+
+.scroll-btn1.right {
+    right: 5px;
+}
+
 
 /*articles pour les achats rapides*/
 
