@@ -1,84 +1,63 @@
- const img_secondaire_bloc = document.querySelectorAll('.img_secondaire');
- const container = document.querySelector('.img_bloc');
- const toggleBtn = document.getElementById('toggle');
+// Toggle pour afficher/cacher les images supplémentaires
+const img_secondaire_bloc = document.querySelectorAll('.img_secondaire');
+const toggleBtn = document.getElementById('toggle');
+const visibleByDefault = 4;
+const hiddenCount = img_secondaire_bloc.length - visibleByDefault;
 
- const totalImages = img_secondaire_bloc.length;
- const visibleByDefault = 4; // Nombre d'images visibles par défaut
- const hiddenCount = totalImages - visibleByDefault;
+function updateToggleButton() {
+    const isAnyHidden = Array.from(img_secondaire_bloc)
+        .slice(visibleByDefault)
+        .some(img => img.classList.contains('masquer'));
 
- function updateToggleButton() {
-     const isAnyHidden = Array.from(img_secondaire_bloc)
-         .slice(visibleByDefault)
-         .some(img => img.classList.contains('masquer'));
+    toggleBtn.textContent = isAnyHidden ? `${hiddenCount}+` : '−';
+}
 
-     if (isAnyHidden) {
-         toggleBtn.textContent = `${hiddenCount}+`;
-         toggleBtn.classList.remove('active');
-     } else {
-         toggleBtn.textContent = '−';
-         toggleBtn.classList.add('active');
-     }
- }
+toggleBtn.addEventListener('click', function() {
+    const isCurrentlyExpanded = !img_secondaire_bloc[visibleByDefault].classList.contains('masquer');
 
- function toggleImages() {
-     const isCurrentlyExpanded = !img_secondaire_bloc[visibleByDefault].classList.contains('masquer');
+    for (let i = visibleByDefault; i < img_secondaire_bloc.length; i++) {
+        if (isCurrentlyExpanded) {
+            img_secondaire_bloc[i].classList.add('masquer');
+        } else {
+            img_secondaire_bloc[i].classList.remove('masquer');
+        }
+    }
+    updateToggleButton();
+});
 
-     // Toggle les images cachées (à partir de l'index 4)
-     for (let i = visibleByDefault; i < img_secondaire_bloc.length; i++) {
-         if (isCurrentlyExpanded) {
-             img_secondaire_bloc[i].classList.add('masquer');
-         } else {
-             img_secondaire_bloc[i].classList.remove('masquer');
-         }
-     }
+// Changer l'image principale
+function changeMainImage(src) {
+    const mainImage = document.querySelector('.img_principale');
+    const newSrc = src.replace('50x50', '600x300');
+    mainImage.src = newSrc;
+}
 
-     updateToggleButton();
- }
+// Sélection de couleur
+function selectColor(colorName, element) {
+    document.querySelectorAll('.couleur').forEach(c => {
+        c.classList.remove('selected');
+        const existingSelect = c.querySelector('.select_color');
+        if (existingSelect) existingSelect.remove();
+    });
 
- toggleBtn.addEventListener('click', toggleImages);
+    element.classList.add('selected');
+    const select = document.createElement('div');
+    select.className = 'select_color';
+    element.appendChild(select);
 
- // Initialiser l'état du bouton
- updateToggleButton();
+    document.getElementById('couleurText').textContent = colorName;
+}
 
- // Animation de chargement
- img_secondaire_bloc.forEach((img, index) => {
-     img.style.animationDelay = `${index * 0.1}s`;
- });
+// Toggle description
+function toggleDescription() {
+    const detail = document.querySelector('.detail');
+    const readmore = document.querySelector('.readmore');
 
- const detail = document.querySelector(".detail");
- const readmore = document.querySelector('.readmore');
-
- const texteComplet = detail.textContent.trim();
- const texte_visible = texteComplet.slice(0, 100);
-
- let isExpanded = false;
-
- detail.innerText = `${texte_visible}...`;
-
- readmore.addEventListener('click', () => {
-     if (!isExpanded) {
-         detail.innerText = texteComplet;
-         readmore.innerText = "read less";
-     } else {
-         detail.innerText = `${texte_visible}...`;
-         readmore.innerText = "read more";
-     }
-     isExpanded = !isExpanded;
- });
-
- const couleur_bloc = document.querySelectorAll(".couleur");
-
- couleur_bloc.forEach((couleur) => {
-     couleur.addEventListener('click', () => {
-         couleur_bloc.forEach(c => {
-             const existingSelect = c.querySelector('.select_color');
-             if (existingSelect) {
-                 existingSelect.remove();
-             }
-         });
-
-         const select = document.createElement('div');
-         select.className = 'select_color';
-         couleur.appendChild(select);
-     });
- });
+    if (detail.style.webkitLineClamp === 'none') {
+        detail.style.webkitLineClamp = '4';
+        readmore.textContent = 'Lire plus';
+    } else {
+        detail.style.webkitLineClamp = 'none';
+        readmore.textContent = 'Lire moins';
+    }
+}

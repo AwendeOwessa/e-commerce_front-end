@@ -54,7 +54,7 @@
 
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
 }
 
@@ -67,7 +67,7 @@ main {
 
 .like {
     position: absolute;
-    width: 5vw;
+    width: 30px;
     top: 0%;
     right: 0%;
 }
