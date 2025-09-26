@@ -1,0 +1,139 @@
+.bloc {
+    display: flex;
+    flex-direction: row;
+}
+
+.bloc h2 {
+    flex: 2;
+}
+
+.retour {
+    border: 3px solid rgb(66, 66, 66);
+    border-radius: 100px;
+    left: -40%;
+    height: 35px;
+    width: 35px;
+}
+
+.retour:hover {
+    background-color: rgb(186, 181, 181);
+    color: white;
+    border: 3px solid white;
+    transition: 0.3s;
+    box-shadow: 0 0 10px white;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.retour:active {
+    background-color: rgb(113, 112, 112);
+    color: white;
+    border: 3px solid white;
+    box-shadow: 0 0 10px white;
+    transform: scale(0.9);
+}
+
+.bloc_article {
+    position: relative;
+    overflow: hidden
+}
+
+.info_article {
+    flex: 1;
+}
+
+.image {
+    height: 100px;
+    max-height: 100px;
+    border-radius: 10px;
+}
+
+.photo {
+    height: 100%;
+    width: auto;
+}
+
+.photo:hover {
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+.ligne1 {
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+    margin: 10px 0;
+}
+
+.quantite_bloc {
+    right: 0;
+}
+
+.quantite {
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: #ccc;
+    border-radius: 4px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.quantite:focus {
+    background-color: rgb(66, 66, 66);
+    color: white;
+}
+
+.quantite:active {
+    background-color: rgb(113, 112, 112);
+    color: white;
+}
+
+.nombre {
+    font-weight: bold;
+}
+
+.bloc_prix {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.delete-elastic {
+    right: -100px;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.promo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#codePromo {
+    outline: none;
+    border: none;
+    background-color: #efefef;
+    width: 65%;
+    border-radius: 200px;
+    margin-right: -60px;
+    z-index: 0;
+}
+
+.appliquer {
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 200px;
+    height: 100%;
+    z-index: 1;
+}
+
+.bouton1 {
+    background-color: black;
+    border-radius: 200px;
+}

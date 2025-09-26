@@ -1,0 +1,94 @@
+.bloc {
+    display: flex;
+    flex-direction: row;
+}
+
+.bloc h2 {
+    flex: 2;
+}
+
+.retour {
+    border: 3px solid rgb(66, 66, 66);
+    border-radius: 100px;
+    left: -40%;
+    height: 35px;
+    width: 35px;
+}
+
+.retour:hover {
+    background-color: rgb(186, 181, 181);
+    color: white;
+    border: 3px solid white;
+    transition: 0.3s;
+    box-shadow: 0 0 10px white;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.retour:active {
+    background-color: rgb(113, 112, 112);
+    color: white;
+    border: 3px solid white;
+    box-shadow: 0 0 10px white;
+    transform: scale(0.9);
+}
+
+.bouton {
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 2px 0;
+    cursor: pointer;
+}
+
+.logo {
+    height: 25px;
+    width: 25px;
+}
+
+.marge {
+    padding-left: 25px;
+}
+
+.ligne {
+    height: 1px;
+    width: 100%;
+    background-color: gray;
+}
+
+.image {
+    height: 100px;
+    max-height: 100px;
+    border-radius: 10px;
+}
+
+.photo {
+    height: 100%;
+    width: auto;
+}
+
+.photo:hover {
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+.ligne1 {
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+    margin: 10px 0;
+}
+
+.bouton1 {
+    background-color: black;
+    border-radius: 200px;
+}
+
+.footer {
+    justify-items: center;
+    height: 10px;
+    width: 200px;
+    background-color: grey;
+    bottom: 0;
+}

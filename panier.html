@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/panier.css">
+    <title>Panier</title>
+</head>
+
+<body class="d-flex flex-column px-2">
+
+    <section class="bloc align-items-center pt-2">
+
+        <a href="page_accueil.html">
+            <div class="retour my-3">
+                <img src="assets/images/fleche_arriere.png" alt="retour" class="img-fluid p-1">
+            </div>
+        </a>
+        <h2 style="text-align: center;">Mon Panier</h2>
+
+    </section>
+
+    <main class="d-flex flex-column gap-3 mt-4">
+
+        <section class="d-flex flex-row gap-4 bloc_article">
+            <div class="image">
+                <img src="assets/images/nike.jpeg" alt="chaussure" class="img-fluid photo">
+            </div>
+            <div class="d-flex flex-column info_article">
+                <h5>Nike Air Force 1 University Blue</h5>
+                <p style="color: gray;">Tennis</p>
+                <p><span class="prix">11000</span> FCFA</p>
+            </div>
+            <div class="d-flex flex-row gap-1 quantite_bloc">
+                <button class="quantite moins">-</button>
+                <p class="nombre">1</p>
+                <button class="quantite plus">+</button>
+            </div>
+        </section>
+        <div class="ligne1"></div>
+
+        <section class="d-flex flex-row gap-4 bloc_article">
+            <div class="image">
+                <img src="assets/images/nike.jpeg" alt="chaussure" class="img-fluid photo">
+            </div>
+            <div class="d-flex flex-column info_article">
+                <h5>Nike Air Force 1 University Blue</h5>
+                <p style="color: gray;">Tennis</p>
+                <p><span class="prix">11000</span> FCFA</p>
+            </div>
+            <div class="d-flex flex-row gap-1 quantite_bloc">
+                <button class="quantite moins">-</button>
+                <p class="nombre">1</p>
+                <button class="quantite plus">+</button>
+            </div>
+        </section>
+        <div class="ligne1"></div>
+
+        <section class="d-flex flex-row gap-4 bloc_article">
+            <div class="image">
+                <img src="assets/images/nike.jpeg" alt="chaussure" class="img-fluid photo">
+            </div>
+            <div class="d-flex flex-column info_article">
+                <h5>Nike Air Force 1 University Blue</h5>
+                <p style="color: gray;">Tennis</p>
+                <p><span class="prix">11000</span> FCFA</p>
+            </div>
+            <div class="d-flex flex-row gap-1 quantite_bloc">
+                <button class="quantite moins">-</button>
+                <p class="nombre">1</p>
+                <button class="quantite plus">+</button>
+            </div>
+        </section>
+        <div class="ligne1"></div>
+
+        <section class="d-flex flex-row gap-4 bloc_article">
+            <div class="image">
+                <img src="assets/images/nike.jpeg" alt="chaussure" class="img-fluid photo">
+            </div>
+            <div class="d-flex flex-column info_article">
+                <h5>Nike Air Force 1 University Blue</h5>
+                <p style="color: gray;">Tennis</p>
+                <p><span class="prix">11000</span> FCFA</p>
+            </div>
+            <div class="d-flex flex-row gap-1 quantite_bloc">
+                <button class="quantite moins">-</button>
+                <p class="nombre">1</p>
+                <button class="quantite plus">+</button>
+            </div>
+        </section>
+        <div class="ligne1"></div>
+
+        <section class="d-flex flex-row gap-4 bloc_article">
+            <div class="image">
+                <img src="assets/images/nike.jpeg" alt="chaussure" class="img-fluid photo">
+            </div>
+            <div class="d-flex flex-column info_article">
+                <h5>Nike Air Force 1 University Blue</h5>
+                <p style="color: gray;">Tennis</p>
+                <p><span class="prix">11000</span> FCFA</p>
+            </div>
+            <div class="d-flex flex-row gap-1 quantite_bloc">
+                <button class="quantite moins">-</button>
+                <p class="nombre">1</p>
+                <button class="quantite plus">+</button>
+            </div>
+        </section>
+        <div class="ligne1"></div>
+
+    </main>
+
+    <section class="d-flex flex-column bloc_prix">
+
+        <div class="promo py-3">
+            <input type="text" id="codePromo" class="px-3 py-2" placeholder="Code Promo">
+            <button class="appliquer px-2 py-2">Appliquer</button>
+        </div>
+
+        <div class="d-flex flex-column">
+            <div class="d-flex flex-row justify-content-between">
+                <p>Total Partiel</p>
+                <p><span id="total_partiel">12000</span> FCFA</p>
+            </div>
+            <div class="d-flex flex-row justify-content-between">
+                <p>Frais de livraison</p>
+                <p><span id="total_partiel">1000</span> FCFA</p>
+            </div>
+            <div class="d-flex flex-row justify-content-between">
+                <p>Remise</p>
+                <p><span id="total_partiel">0</span> FCFA</p>
+            </div>
+
+            <div class="ligne1"></div>
+
+            <div class="d-flex flex-row justify-content-between">
+                <p>Prix Total</p>
+                <p><span id="total_partiel">13000</span> FCFA</p>
+            </div>
+        </div>
+
+        <p class="my-3" style="text-align: center;"><a href="paiement.html" style="text-decoration: none; color: white;" class="bouton1 px-4 py-3">Procéder au paiement</a></p>
+
+    </section>
+
+    <script src="assets/javascript/panier.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js " integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q " crossorigin="anonymous "></script>
+</body>
+
+</html>
